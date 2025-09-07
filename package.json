@@ -4,14 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "firebase emulators:exec --only auth,firestore 'npm run dev:vite'",
+    "dev:vite": "vite",
+    "dev:firebase": "firebase emulators:start --only auth,firestore",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "kill:firebase": "lsof -t -i :9099 -i:5001 -i:8090 -i:4000 -i:8080 -i:8085 | xargs kill -9"
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^6.28.0",
+    "firebase": "^10.7.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
