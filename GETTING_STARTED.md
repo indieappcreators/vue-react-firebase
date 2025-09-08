@@ -2,17 +2,26 @@
 
 ## ⚡ Get Running in 5 Minutes
 
-### 1. Install Dependencies
+### 1. Install Firebase CLI (Required)
+```bash
+# Option 1: Run the setup script (recommended)
+./setup.sh
+
+# Option 2: Install manually
+npm install -g firebase-tools
+```
+
+### 2. Install Dependencies
 ```bash
 npm install
 ```
 
-### 2. Configure Firebase
+### 3. Configure Firebase
 - Open `firebaseConfig.js`
 - Replace placeholder values with your Firebase project config
 - Update `.firebaserc` with your project ID
 
-### 3. Start Development
+### 4. Start Development
 ```bash
 # Start everything with Firebase exec (recommended)
 npm run dev:full

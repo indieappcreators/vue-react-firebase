@@ -13,12 +13,21 @@ A minimal React 19 + Firebase boilerplate with authentication and emulator suppo
 
 ## Quick Start
 
-1. Install dependencies:
+1. Install Firebase CLI (required for emulators):
+```bash
+# Option 1: Run the setup script (recommended)
+./setup.sh
+
+# Option 2: Install manually
+npm install -g firebase-tools
+```
+
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Start development:
+3. Start development:
 ```bash
 npm run dev
 ```
