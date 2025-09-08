@@ -11,9 +11,11 @@ A minimal React 19 + Firebase boilerplate with authentication and emulator suppo
 - TypeScript support
 - React Router for navigation
 
-## Quick Start
+## 🚀 Quick Start
 
-1. Install Firebase CLI (required for emulators):
+### ⚡ Get Running in 5 Minutes
+
+1. **Install Firebase CLI (Required)**:
 ```bash
 # Option 1: Run the setup script (recommended)
 ./setup.sh
@@ -22,19 +24,41 @@ A minimal React 19 + Firebase boilerplate with authentication and emulator suppo
 npm install -g firebase-tools
 ```
 
-2. Install dependencies:
+2. **Install Dependencies**:
 ```bash
 npm install
 ```
 
-3. Start development:
+3. **Configure Firebase**:
+- Open `firebaseConfig.js`
+- Replace placeholder values with your Firebase project config
+- Update `.firebaserc` with your project ID
+
+4. **Start Development**:
 ```bash
+# Start everything with Firebase exec (recommended)
 npm run dev
+
+# Or separately:
+npm run dev:firebase  # Firebase emulators
+npm run dev:vite      # React dev server
 ```
 
-Your app will be available at:
-- React App: http://localhost:5173
-- Firebase Emulator UI: http://localhost:4000
+### 🌐 Access Points
+- **React App:** http://localhost:5173
+- **Firebase Emulator UI:** http://localhost:4000
+
+### 🔐 Test Authentication
+1. Go to http://localhost:5173/login
+2. Enter any email address
+3. Check Firebase Emulator UI for the sign-in link
+4. Click the link to sign in
+
+## 📁 Key Files
+- `firebaseConfig.js` - Your Firebase settings
+- `src/components/Login.tsx` - Authentication page
+- `src/components/Home.tsx` - Main dashboard
+- `src/firebase/auth.ts` - Auth functions
 
 ## Available Scripts
 
@@ -54,13 +78,11 @@ src/
 └── main.tsx            # App entry point
 ```
 
-## Authentication
+## 🆘 Need Help?
+- Run `./setup.sh` for setup assistance
+- Review browser console for errors
+- Ensure Firebase emulators are running
 
-Uses Email Link Authentication (magic links):
-1. User enters email on login page
-2. Firebase sends a sign-in link to their email
-3. User clicks the link to sign in automatically
+---
 
-## Development
-
-The project automatically connects to Firebase emulators in development mode.
+**That's it! You're ready to build amazing React apps! 🎉**
