@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { checkAuthentication, signOut } from '../firebase/auth';
 import type { User, AuthState } from '../firebase/types';
+import Nav from './Nav';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -46,7 +47,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <h1>Home</h1>
-      
+      <Nav className="nav" />
       {authState.isLoading ? (
         <div>
           <p>Loading...</p>
@@ -55,9 +56,6 @@ const Home: React.FC = () => {
         <div>
           <h2>Hello, {authState.user.email}</h2>
           <p>You are signed in.</p>
-          <button onClick={handleSignOut}>
-            Sign Out
-          </button>
           <button onClick={() => navigate('/todos')}>
             View Todos
           </button>

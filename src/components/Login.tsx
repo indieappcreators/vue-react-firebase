@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { sendSignInLink, signInWithLink } from '../firebase/auth';
 import type { LoginFormData } from '../firebase/types';
+import Nav from './Nav';
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ const Login: React.FC = () => {
     setMessageType(type);
     setTimeout(() => {
       setMessage('');
-      setMessageType('');
+      setMessageType('success');
     }, 5000);
   };
 
@@ -70,7 +71,7 @@ const Login: React.FC = () => {
   return (
     <div>
       <h1>Login</h1>
-      
+      <Nav className="nav" />
       <form onSubmit={handleSendSignInLink}>
         <div>
           <label htmlFor="email">Email:</label>

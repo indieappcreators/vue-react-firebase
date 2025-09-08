@@ -9,3 +9,31 @@ body {
   max-width: 800px;
   margin: 0 auto;
 }
+
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.nav-list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todoItem-text {
+  min-width: 200px;
+  margin: 0;
+}
