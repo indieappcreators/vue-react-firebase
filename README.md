@@ -20,7 +20,7 @@ npm install
 
 2. Start development:
 ```bash
-npm run dev:full
+npm run dev
 ```
 
 Your app will be available at:
@@ -29,9 +29,9 @@ Your app will be available at:
 
 ## Available Scripts
 
-- `npm run dev` - Start React development server
+- `npm run dev` - Start both React and Firebase
 - `npm run dev:firebase` - Start Firebase emulators
-- `npm run dev:full` - Start both React and Firebase
+- `npm run dev:vite` - Start vite server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 

@@ -19,7 +19,7 @@ npm run dev:full
 
 # Or separately:
 npm run dev:firebase  # Firebase emulators
-npm run dev          # React dev server
+npm run dev:vite      # React dev server
 ```
 
 ## 🌐 Access Points
